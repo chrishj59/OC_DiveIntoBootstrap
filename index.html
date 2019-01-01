@@ -3,7 +3,7 @@
 
   <head>
 
-    <meta charset="utf-8"> 
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Architecture</title>
@@ -19,7 +19,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <style type="text/css"> 
+    <style type="text/css">
 
       /* Styles de base */
       body {
@@ -28,12 +28,58 @@
         -moz-background-size: cover;
         background-size: cover;
         -o-background-size: cover;
+        padding-top: 70px;
       }
+
+      @media (max-width: 1200px) {
+     .navbar-header {
+         float: none;
+     }
+     .navbar-left,.navbar-right {
+         float: none !important;
+     }
+     .navbar-toggle {
+         display: block;
+     }
+     .navbar-collapse {
+         border-top: 1px solid transparent;
+         box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+     }
+     .navbar-fixed-top {
+         top: 0;
+         border-width: 0 0 1px;
+     }
+     .navbar-collapse.collapse {
+         display: none!important;
+     }
+     .navbar-nav {
+         float: none!important;
+         margin-top: 7.5px;
+     }
+     .navbar-nav>li {
+         float: none;
+     }
+     .navbar-nav>li>a {
+         padding-top: 10px;
+         padding-bottom: 10px;
+     }
+     .collapse.in{
+         display:block !important;
+     }
+ }
 
       /* Images */
       img {
         width: 100%;
       }
+      .carousel-indicators .active{
+        background-color: #000099;
+      }
+      .carousel-caption {
+       color:  #ccffee;
+      }
+
+
 
     </style>
 
@@ -45,6 +91,30 @@
 
       <!-- Navigation
       ================================================== -->
+     <div class="container-fullwidth">
+      <div class="nav navbar-inverse navbar-fixed-top">
+       <div class="container-fluid">
+        <div class="navbar-header">
+         <button type="button" data-spy="scroll" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"
+         dropdown-toggle>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="#">Architecture</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+         <li class="hidden"><a href="#page-top"></a></li>
+         <li><a href="#home">Home</a></li>
+         <li><a href="#who">Who we are</a></li>
+         <li><a href="#contact">Contact</a></li>
+        </ul>
+       </div>
+       </div>
+      </div>
+     </div>
+     <!-- replace with dark horizontal  bar
       <a href="#page-top">Architecture</a>
       <ul>
         <li class="hidden"><a href="#page-top"></a></li>
@@ -52,29 +122,56 @@
         <li><a href="#who">Who we are</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-
+  -->
     </header>
 
     <!-- Caroussel
     ================================================== -->
+    <div class="container">
+     <div class="col-lg-offset-2 col-lg-8">
+      <div id="carousel" class="carousel slide" data-ride="carousel">
+       <ol class="carousel-indicators">
+        <li data-spy="scroll" data-target="#carousel" data-slide-to="0" class="active"></li>
+        <li data-spy="scroll" data-target="#carousel" data-slide-to="1"></li>
+        <li data-spy="scroll" data-target="#carousel" data-slide-to="2"></li>
+        <li data-spy="scroll" data-target="#carousel" data-slide-to="3"></li>
+       </ol>
+       <div class="carousel-inner">
+        <div class="item active"><img src="assets/img/archi1.jpg" alt="Architecture">
+         <h1 class="carousel-caption"> Great architecture 1 </h1>
+        </div>
+        <div class="item "><img src="assets/img/archi2.jpg" alt="Architecture">
+         <h1 class="carousel-caption"> Great architecture 2 </h1>
+        </div>
+        <div class="item "><img src="assets/img/archi3.jpg" alt="Architecture">
+         <h1 class="carousel-caption"> Great architecture 3 </h1>
+        </div>
+        <div class="item "><img src="assets/img/archi4.jpg" alt="Architecture">
+         <h1 class="carousel-caption"> Great architecture 4 </h1>
+        </div>
+       </div>
+     </div>
+    </div>
+   </div>
+    <!--
     <img src="assets/img/archi1.jpg" alt="Architecture">
     <img src="assets/img/archi2.jpg" alt="Architecture">
     <img src="assets/img/archi3.jpg" alt="Architecture">
     <img src="assets/img/archi4.jpg" alt="Architecture">
-
+   -->
     <!-- Corps de page déjà codé
     ================================================== -->
     <div class="container">
 
       <div class="jumbotron container row" id="home">
         <h1 class="text-center">Welcome to our space</h1>
-        <img class="col-sm-12 col-md-5" src="assets/img/accueil.jpg" alt="Accueil">     
+        <img class="col-sm-12 col-md-5" src="assets/img/accueil.jpg" alt="Accueil">
         <p class="col-sm-12 col-md-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio leo, placerat vel lorem non, vehicula ornare purus. Morbi egestas, quam quis vulputate egestas, nisi ligula efficitur elit, in tincidunt velit dolor nec tellus. Donec tincidunt dui vel est malesuada, eget porta ex dictum. Phasellus sodales magna ac elit volutpat, sit amet pretium mi ullamcorper. Pellentesque volutpat commodo odio ut tincidunt. Sed ligula enim, venenatis consectetur pharetra consequat.</p>
       </div>
 
       <div class="jumbotron container row" id="who">
         <h1 class="text-center">An efficient team</h1>
-        <img class="col-sm-12 col-md-5 col-md-push-7" src="assets/img/equipe.jpg" alt="Equipe"> 
+        <img class="col-sm-12 col-md-5 col-md-push-7" src="assets/img/equipe.jpg" alt="Equipe">
         <p class="col-sm-12 col-md-7 col-md-pull-5">Pellentesque urna ex, ullamcorper id velit in, iaculis sodales diam. Maecenas egestas quam sem, eget fermentum augue posuere quis. Quisque sed mi vel justo vestibulum iaculis.
       </div>
 
@@ -98,15 +195,21 @@
     <!-- Pied de page
     ================================================== -->
     <footer>
+     <div class="col-lg-offset-4 col-sm-offset-4 col-lg-12">
       <a class="btn btn-default" href="#"><i class="fa fa-twitter fa-2x"></i></a>
       <a class="btn btn-default" href="#"><i class="fa fa-facebook fa-2x"></i></a>
       <a class="btn btn-default" href="#"><i class="fa fa-google-plus fa-2x"></i></a>
       <a class="btn btn-default" href="#"><i class="fa fa-flickr fa-2x"></i></a>
       <a class="btn btn-default" href="#"><i class="fa fa-spotify fa-2x"></i></a>
+     </div>
     </footer>
 
     <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+    <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
     <!-- Javascript de Bootstrap -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
@@ -123,6 +226,13 @@
           });
         });
       });
+
+      $(function(){
+     var navMain = $("#myNavbar");
+     navMain.on("click", "a", null, function () {
+         navMain.collapse('hide');
+     });
+ });
     </script>
 
   </body>
